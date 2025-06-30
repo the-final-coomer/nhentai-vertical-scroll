@@ -7,5 +7,5 @@ Loads all nHentai images onto a single page for vertical scrolling.
 Only available for Firefox (contributors welcome!)
 
 **Downloads**
-Firefox Marketplace:
-Local ZIP: https://github.com/the-final-coomer/nhentai-vertical-scroll/releases/latest
+- Firefox Marketplace: Waiting on approval
+- Local ZIP: https://github.com/the-final-coomer/nhentai-vertical-scroll/releases/latest
