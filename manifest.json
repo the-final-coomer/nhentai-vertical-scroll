@@ -6,7 +6,9 @@
   "description": "Loads all images onto a single page for vertical scrolling.",
 
   "icons": {
-    "48": "icons/border-48.png"
+    "48": "icons/icon_48.png",
+    "96": "icons/icon_96.png",
+    "128": "icons/icon_128.png"
   },
 
   "content_scripts": [
