@@ -11,6 +11,14 @@
     "128": "icons/icon_128.png"
   },
 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "nhentaiverticalscroll@coomerland.com",
+      "strict_min_version": "58.0"
+    }
+  },
+
+
   "content_scripts": [
     {
       "matches": ["https://nhentai.net/g/*"],
