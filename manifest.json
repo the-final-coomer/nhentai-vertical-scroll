@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "nHentai Vertical Scroll",
+  "version": "1.0",
+
+  "description": "Loads all images onto a single page for vertical scrolling.",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://nhentai.net/g/*"],
+      "js": ["js/jquery-3.7.1.min.js", "js/vertical_scroll.js"]
+    }
+  ]
+}
