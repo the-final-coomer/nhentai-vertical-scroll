@@ -1,5 +1,8 @@
 Changelog
 
+Version 1.2.2
+- fixed cors error and loading error
+
 Version 1.2.1
 - fixed a tiny minor bug where literally everything wouldn't work
 
