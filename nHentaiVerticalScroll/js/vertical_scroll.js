@@ -1,11 +1,3 @@
-let lastUrl = location.href;
-new MutationObserver(() => {
-    if (location.href !== lastUrl) {
-        lastUrl = location.href;
-        init();
-    }
-}).observe(document.body, { subtree: true, childList: true });
-
 function init() {
     const bigcontainer = document.querySelector("#bigcontainer");
     if (!bigcontainer) return;
@@ -57,3 +49,31 @@ function init() {
 			console.error("nHentai Vertical Scroll: ", String(error));
 		});
 }
+
+function waitForContainer() {
+  if (document.querySelector("#bigcontainer")) {
+    init();
+    return;
+  }
+
+  const domObserver = new MutationObserver(() => {
+    if (document.querySelector("#bigcontainer")) {
+      domObserver.disconnect();
+      init();
+    }
+  });
+  domObserver.observe(document.body, { childList: true, subtree: true });
+}
+
+let lastUrl = location.href;
+const navObserver = new MutationObserver(() => {
+  if (location.href !== lastUrl) {
+    lastUrl = location.href;
+    if (location.pathname.match(/^\/g\/\d+/)) {
+      waitForContainer();
+    }
+  }
+});
+navObserver.observe(document.body, { childList: true, subtree: true });
+
+waitForContainer();
