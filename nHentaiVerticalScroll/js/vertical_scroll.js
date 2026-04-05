@@ -1,5 +1,16 @@
-const bigcontainer = document.querySelector("#bigcontainer");
-const id = location.pathname.split("/")[2];
+let lastUrl = location.href;
+new MutationObserver(() => {
+    if (location.href !== lastUrl) {
+        lastUrl = location.href;
+        init();
+    }
+}).observe(document.body, { subtree: true, childList: true });
+
+function init() {
+    const bigcontainer = document.querySelector("#bigcontainer");
+    if (!bigcontainer) return;
+    
+	const id = location.pathname.split("/")[2];
 
 fetch("https://nhentai.net/api/v2/galleries/" + id)
     .then(response => {
@@ -46,3 +57,4 @@ fetch("https://nhentai.net/api/v2/galleries/" + id)
     .catch(error => {
         console.error("nHentai Vertical Scroll: ", String(error));
     });
+}
