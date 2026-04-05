@@ -42,7 +42,6 @@ function init() {
 				for (let i = 0; i < PRELOAD && index < pages.length; i++, index++) {
 					const image = document.createElement('img');
 					image.dataset.src = "https://i.nhentai.net/" + pages[index].path;
-					image.crossOrigin = "anonymous";
 					image.loading = "lazy";
 
 					previous.insertAdjacentElement("afterend", image);
