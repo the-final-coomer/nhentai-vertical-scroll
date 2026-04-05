@@ -1,5 +1,8 @@
 Changelog
 
+Version 1.2.1
+- fixed a tiny minor bug where literally everything wouldn't work
+
 Version 1.2
 - Changed api endpoint (they removed it the day i updated it)
 - Made loading smarter to prevent rate limits (It loads as you scroll)
