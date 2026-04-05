@@ -1,4 +1,13 @@
 Changelog
 
+Version 1.2
+- Changed api endpoint (they removed it the day i updated it)
+- Made loading smarter to prevent rate limits (It loads as you scroll)
+- Removed JQuery and just used DOM (jquery was a bit overkill)
+
+Version 1.1
+- Moved to nhentai api v2
+- Changed image loading to be much more reliable
+
 Version 1.0
 - Created initial extension
