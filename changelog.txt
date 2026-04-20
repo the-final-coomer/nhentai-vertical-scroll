@@ -1,5 +1,8 @@
 Changelog
 
+version 1.2.3
+- added android support
+
 Version 1.2.2
 - fixed cors error and loading error
 
