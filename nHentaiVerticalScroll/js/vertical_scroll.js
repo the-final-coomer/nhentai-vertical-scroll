@@ -35,6 +35,8 @@ function init() {
 					const image = document.createElement('img');
 					image.dataset.src = "https://i.nhentai.net/" + pages[index].path;
 					image.loading = "lazy";
+					image.style.display = "block";
+					image.style.margin = "auto";
 
 					previous.insertAdjacentElement("afterend", image);
 					previous = image;

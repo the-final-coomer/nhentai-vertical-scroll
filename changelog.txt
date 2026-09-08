@@ -1,5 +1,8 @@
 Changelog
 
+version 1.3.0
+- added styling to make the images always display vertically
+
 version 1.2.3
 - added android support
 
